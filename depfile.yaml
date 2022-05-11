@@ -1,0 +1,29 @@
+paths:
+  - ./src
+layers:
+  - name: Ports
+    collectors:
+      - type: className
+        regex: .*Ports.*
+  - name: Adapters
+    collectors:
+      - type: className
+        regex: .*Adapters.*
+  - name: Application
+    collectors:
+      - type: className
+        regex: .*Application.*
+  - name: Domain
+    collectors:
+      - type: className
+        regex: .*Domain.*
+
+ruleset:
+  Ports:
+    - Application
+  Adapters:
+    - Application
+    - Domain
+  Application:
+    - Domain
+  Domain: ~

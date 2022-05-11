@@ -1,0 +1,13 @@
+shop_api_controllers:
+    resource: ../../src/Infrastructure/Ports/ShopApi/Controller
+    type: annotation
+    prefix: shop/api/
+
+back_office_api_controllers:
+    resource: ../../src/Infrastructure/Ports/BackOfficeApi/Controller
+    type: annotation
+    prefix: admin/api/
+
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation
